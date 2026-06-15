@@ -1,0 +1,48 @@
+{
+  "name": "StudySession",
+  "type": "object",
+  "properties": {
+    "subject_id": {
+      "type": "string"
+    },
+    "assignment_id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "duration_minutes": {
+      "type": "number",
+      "default": 25
+    },
+    "actual_minutes": {
+      "type": "number",
+      "default": 0
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "pomodoro",
+        "free_study",
+        "revision",
+        "exam_prep"
+      ],
+      "default": "free_study"
+    },
+    "completed": {
+      "type": "boolean",
+      "default": false
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "title",
+    "date"
+  ]
+}

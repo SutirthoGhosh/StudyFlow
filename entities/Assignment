@@ -1,0 +1,90 @@
+{
+  "name": "Assignment",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "subject_id": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "due_date": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": [
+        "easy",
+        "medium",
+        "hard"
+      ],
+      "default": "medium"
+    },
+    "estimated_hours": {
+      "type": "number",
+      "default": 1
+    },
+    "teacher_name": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "attachment_urls": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "in_progress",
+        "completed",
+        "archived"
+      ],
+      "default": "pending"
+    },
+    "completion_percentage": {
+      "type": "number",
+      "default": 0
+    },
+    "priority_score": {
+      "type": "number",
+      "default": 0
+    },
+    "priority_level": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "critical"
+      ],
+      "default": "medium"
+    },
+    "completed_date": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "homework",
+        "project",
+        "exam",
+        "study_task"
+      ],
+      "default": "homework"
+    }
+  },
+  "required": [
+    "title",
+    "due_date"
+  ]
+}

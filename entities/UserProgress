@@ -1,0 +1,41 @@
+{
+  "name": "UserProgress",
+  "type": "object",
+  "properties": {
+    "xp": {
+      "type": "number",
+      "default": 0
+    },
+    "level": {
+      "type": "number",
+      "default": 1
+    },
+    "streak_days": {
+      "type": "number",
+      "default": 0
+    },
+    "longest_streak": {
+      "type": "number",
+      "default": 0
+    },
+    "last_activity_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "total_assignments_completed": {
+      "type": "number",
+      "default": 0
+    },
+    "total_study_minutes": {
+      "type": "number",
+      "default": 0
+    },
+    "badges": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": []
+}
